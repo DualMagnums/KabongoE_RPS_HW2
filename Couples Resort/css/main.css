@@ -1,0 +1,209 @@
+/* --- Basic CSS Reset --- */
+
+h1, h2, h3, h4, h5, p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    transition: all .5s ease-in-out;
+}
+
+input, textarea {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+/* 
+
+    CSS Guide
+
+    1. General Styles
+    2. Grid
+    3. Header
+    4. Main Hero Image
+    5. Why Couples Resort
+    6. About & FAQ
+    7. Contact Form
+    8. Footer
+
+*/
+
+/* 1. ---General Styles--- */
+
+.hidden {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #626262;
+    font-family: 'Sanchez', 'Times New Roman', serif;
+    font-size: 14px;
+}
+
+.container {
+    width: 320px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: solid 1px #333;
+}
+
+/* 2. --- Grid --- */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-column-gap: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/* 3. --- Header --- */
+
+#main-nav label img {
+    width: 20px;
+    height: 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+#main-nav input,#burger-con {
+    display: none;
+}
+
+#main-nav input:checked ~ #burger-con {
+    display: block;
+}
+
+#main-nav input:checked ~ label img {
+    transform: rotate(90deg);
+}
+
+#main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#main-nav ul li a {
+    display: block;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    color: rgb(56, 56, 56);
+}
+
+#main-nav ul li {
+    border-bottom: 1px solid #efefef;
+}
+
+#main-nav ul li:first-child {
+    border-top: 1px solid #efefef;
+}
+
+#main-nav ul li:last-child {
+    margin-bottom: 10px;
+}
+
+#logo {
+    grid-column: 1/-1;
+}
+
+/* 4. --- Manin Hero Image --- */
+
+#main-hero {
+    margin-top: 20px;
+}
+
+#main-hero img {
+    grid-column: 1/-1;
+    grid-row: 1/3;
+    /*Use This Sparingly*/
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.book-now {
+    background-color: #9a2018;
+    color: #fff;
+    display: flex;
+    font-size: 16px;
+    font-style: italic;
+    grid-column: 3/-1;
+    grid-row: 1/2;
+    height: 67px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s linear;
+}
+
+.book-now:hover {
+    box-shadow: inset 0px -67px 0px red;
+}
+
+.hero-img-h2, .hero-img-h3 {
+    background-color: white;
+    padding: 15px 15px;
+    font-size: 14px;
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    align-self: end;
+}
+
+.hero-img-h2 span, .hero-img-h3 span {
+    color: #9a2018;
+    font-size: 12px;
+    margin-bottom: 10px;
+    
+}
+
+#hero-welcome {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+#hero-welcome p {
+    grid-column: 1/-15;
+    margin-bottom: 20px;
+}
+
+#hero-welcome h2 + p {
+    border-top: solid 3px #CF6666;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+#hero-contact {
+    background-color: #efefef;
+    font-size: 12px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 50px;
+}
+
+#contact-con div {
+    grid-column: 1/-1;
+
+}
+
+.fas {
+    font-size: 50px;
+    color: #9a2018;
+    float: left;
+}
+
+.fa-mobile-alt {
+    margin-left: 50px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
+.fa-map-marker-alt {
+    margin-left: 47px;
+    margin-right: 10px
+}
